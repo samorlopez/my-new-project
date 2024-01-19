@@ -61,3 +61,42 @@ print(s[6: ])
 print(s[ : -1])
 s = "H" + s[1:]
 print (s)
+#for loop and if
+bin_list = [0,1,1,0,1,1,0]
+for i in range(0,len(bin_list)):
+    if bin_list[i]==0:
+        print("Zero")
+#file reading
+print("//file reading//")
+fname = "testfile.txt"
+
+file = open(fname, "r")
+print(file.read())
+file.close()
+#conditionals
+print("//conditionals//")
+x = 10
+if (x==5):
+    print("x is 5")
+elif (x==10):
+    print("x is 10")
+else :
+    print("x is not 5 or 10")
+#dictionaries
+print("//dictionaries//")
+mydict = {
+    "name" : "Sam",
+    "age" : 19,
+    "is_student" : True,
+    "grades" : [85,90,80]
+}
+print(mydict["name"])
+mydict["name"] = "Samuel Lopez"
+print(mydict["name"])
+print(mydict["is_student"])
+print("school" in mydict)
+mydict["school"] = "UW"
+print(mydict["school"])
+print(mydict.keys())
+for key in mydict.keys():
+    print(key + ": " + str(mydict[key]))
