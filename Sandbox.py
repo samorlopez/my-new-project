@@ -100,3 +100,18 @@ print(mydict["school"])
 print(mydict.keys())
 for key in mydict.keys():
     print(key + ": " + str(mydict[key]))
+
+s = "hello"
+letter_dict = {}
+for char in s:
+    if char not in letter_dict.keys():
+        letter_dict[char] = 1
+    else:
+        letter_dict[char] = letter_dict[char] + 1
+print(letter_dict)
+
+letter_dict2 = {}
+for char in s:
+    letter_dict2[char] = letter_dict2.get(char, 0) + 1
+print(letter_dict2)
+

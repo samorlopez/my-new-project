@@ -12,7 +12,7 @@ for char in text:
         count = count+1
 print(count)
 
-s = "my name is samuel lopez"
+s = "hello"
 letter_dict = {}
 for char in s:
     if char not in letter_dict.keys():
@@ -20,3 +20,8 @@ for char in s:
     else:
         letter_dict[char] = letter_dict[char] + 1
 print(letter_dict)
+
+letter_dict2 = {}
+for char in s:
+    letter_dict2[char] = letter_dict2.get(char, 0) + 1
+print(letter_dict2)
