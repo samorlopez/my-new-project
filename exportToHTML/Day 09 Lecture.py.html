@@ -1,0 +1,56 @@
+<html>
+<head>
+<title>Day 09 Lecture.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #6aab73;}
+.s4 { color: #2aacb8;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Day 09 Lecture.py</font>
+</center></td></tr></table>
+<pre><span class="s0">class </span><span class="s1">Dog</span><span class="s2">:</span>
+    <span class="s0">def </span><span class="s1">__init__</span><span class="s2">(</span><span class="s1">self</span><span class="s2">, </span><span class="s1">name</span><span class="s2">, </span><span class="s1">age</span><span class="s2">, </span><span class="s1">breed</span><span class="s2">, </span><span class="s1">tricks </span><span class="s2">= []):</span>
+        <span class="s1">self</span><span class="s2">.</span><span class="s1">name </span><span class="s2">= </span><span class="s1">name</span>
+        <span class="s1">self</span><span class="s2">.</span><span class="s1">age </span><span class="s2">= </span><span class="s1">age</span>
+        <span class="s1">self</span><span class="s2">.</span><span class="s1">breed </span><span class="s2">= </span><span class="s1">breed</span>
+        <span class="s1">self</span><span class="s2">.</span><span class="s1">tricks </span><span class="s2">= </span><span class="s1">tricks</span>
+
+    <span class="s0">def </span><span class="s1">bark</span><span class="s2">(</span><span class="s1">self</span><span class="s2">):</span>
+        <span class="s1">print</span><span class="s2">(</span><span class="s1">self</span><span class="s2">.</span><span class="s1">name </span><span class="s2">+ </span><span class="s3">&quot; says woof!&quot;</span><span class="s2">)</span>
+
+    <span class="s0">def </span><span class="s1">learn_trick</span><span class="s2">(</span><span class="s1">self</span><span class="s2">, </span><span class="s1">trick</span><span class="s2">):</span>
+        <span class="s1">self</span><span class="s2">.</span><span class="s1">tricks</span><span class="s2">.</span><span class="s1">append</span><span class="s2">(</span><span class="s1">trick</span><span class="s2">)</span>
+        <span class="s1">print</span><span class="s2">(</span><span class="s1">self</span><span class="s2">.</span><span class="s1">name </span><span class="s2">+ </span><span class="s3">&quot; learned &quot; </span><span class="s2">+ </span><span class="s1">trick</span><span class="s2">.</span><span class="s1">lower</span><span class="s2">())</span>
+
+    <span class="s0">def </span><span class="s1">print_tricks</span><span class="s2">(</span><span class="s1">self</span><span class="s2">):</span>
+        <span class="s0">if </span><span class="s1">len</span><span class="s2">(</span><span class="s1">self</span><span class="s2">.</span><span class="s1">tricks</span><span class="s2">) &lt;= </span><span class="s4">0</span><span class="s2">:</span>
+            <span class="s1">print</span><span class="s2">(</span><span class="s1">self</span><span class="s2">.</span><span class="s1">name </span><span class="s2">+ </span><span class="s3">&quot; doesn't have any tricks.&quot;</span><span class="s2">)</span>
+        <span class="s0">else</span><span class="s2">:</span>
+            <span class="s1">tricks </span><span class="s2">= </span><span class="s1">self</span><span class="s2">.</span><span class="s1">name </span><span class="s2">+ </span><span class="s3">&quot; knows &quot;</span>
+            <span class="s0">for </span><span class="s1">trick </span><span class="s0">in </span><span class="s1">self</span><span class="s2">.</span><span class="s1">tricks</span><span class="s2">:</span>
+                <span class="s1">tricks </span><span class="s2">+= </span><span class="s1">trick</span><span class="s2">.</span><span class="s1">lower</span><span class="s2">() + </span><span class="s3">&quot;, &quot;</span>
+            <span class="s1">print</span><span class="s2">(</span><span class="s1">tricks</span><span class="s2">)</span>
+
+<span class="s1">dog1 </span><span class="s2">= </span><span class="s1">Dog</span><span class="s2">(</span><span class="s3">&quot;Apollo&quot;</span><span class="s2">, </span><span class="s4">1</span><span class="s2">, </span><span class="s3">&quot;Rottweiler&quot;</span><span class="s2">)</span>
+<span class="s1">dog1</span><span class="s2">.</span><span class="s1">bark</span><span class="s2">()</span>
+
+<span class="s1">dog2 </span><span class="s2">= </span><span class="s1">Dog</span><span class="s2">(</span><span class="s3">&quot;Essie&quot;</span><span class="s2">, </span><span class="s4">100</span><span class="s2">, </span><span class="s3">&quot;Pitbull&quot;</span><span class="s2">,[</span><span class="s3">&quot;Sit&quot;</span><span class="s2">, </span><span class="s3">&quot;Stay&quot;</span><span class="s2">])</span>
+<span class="s1">dog2</span><span class="s2">.</span><span class="s1">bark</span><span class="s2">()</span>
+
+<span class="s1">dog3 </span><span class="s2">= </span><span class="s1">Dog</span><span class="s2">(</span><span class="s3">&quot;Snowbear&quot;</span><span class="s2">, </span><span class="s4">1000</span><span class="s2">, </span><span class="s3">&quot;American Eskimo&quot;</span><span class="s2">)</span>
+<span class="s1">dog3</span><span class="s2">.</span><span class="s1">bark</span><span class="s2">()</span>
+
+<span class="s1">dog1</span><span class="s2">.</span><span class="s1">print_tricks</span><span class="s2">()</span>
+<span class="s1">dog2</span><span class="s2">.</span><span class="s1">print_tricks</span><span class="s2">()</span>
+<span class="s1">dog1</span><span class="s2">.</span><span class="s1">learn_trick</span><span class="s2">(</span><span class="s3">&quot;Sit&quot;</span><span class="s2">)</span>
+<span class="s1">dog3</span><span class="s2">.</span><span class="s1">print_tricks</span><span class="s2">()</span></pre>
+</body>
+</html>
